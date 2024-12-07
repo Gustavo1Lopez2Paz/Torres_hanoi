@@ -35,6 +35,11 @@ def get_input():
             letter = choices[i]
             print(f"Escribe {letter} para {name}")
         user_input = input()
-
+        if user_input in choices:
+            for i in range(len(stacks)):
+                if user_input == choices[i]:
+                    return stacks[i]
+        else:
+            print("Entrada no válida. Intenta de nuevo.")
         
 #Jugando el juego
