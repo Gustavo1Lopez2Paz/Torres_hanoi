@@ -43,3 +43,14 @@ def get_input():
             print("Entrada no válida. Intenta de nuevo.")
         
 #Jugando el juego
+num_user_moves = 0
+while right_stack.get_size() != num_disks:
+    print("\n\n\n...Pilas actuales...")
+    for stack in stacks:
+        stack.print_items()
+
+    while True:
+        print("\n¿Desde qué pila quieres mover un disco?")
+        from_stack = get_input()
+        print("\n¿A qué pila quieres mover el disco?")
+        to_stack = get_input()
